@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <link rel="icon" type="image/x-icon" href="Imagens/hugALL-removebg-preview.png">
+    <title>Login no HugAll</title>
+</head>
+<body>
+    <div id="main">
+        <div class="menu">
+            <h2 id="Logo"><img id="image" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
+            <a href="cadastro.html">Cadastra-se</a>
+            <a href="Index.html">Sobre Nós</a>
+            <a href="Equipe.html">A Equipe</a>
+            <a href="Carrosel.html">ONGs em Destaque</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <div class="body">
+            <form id="form" action="./cadastro.php" method="POST" onsubmit="return validacao()">
+                <div class="input">
+                    <label for="">CPF</label>
+                    <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
+                </div>
+                <div class="input">
+                    <label for="">Senha</label>
+                    <input type="text" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
+                </div>
+                <div class="input">
+                    <button type="submit" class="button" id="button-send">Fazer Login</button>
+                </div>
+            </form>
+            <a href="cadastro.html"><label style="cursor: pointer;">não tem um cadastro ? Cadastra-se</label></a>
+        </div>
+    </div>
+    <script lang="javascript">
+        function home(){
+            location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

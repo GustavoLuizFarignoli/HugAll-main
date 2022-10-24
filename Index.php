@@ -12,10 +12,10 @@
     <div id="main">
         <div class="menu">
             <h2 id="Logo"><img id="image" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-            <a href="login.html">Logar-se</a>
-            <a href="Index.html">Sobre Nós</a>
-            <a href="Equipe.html">A Equipe</a>
-            <a href="Carrosel.html">ONGs em Destaque</a>
+            <a href="login.php">Logar-se</a>
+            <a href="Index.php">Sobre Nós</a>
+            <a href="Equipe.php">A Equipe</a>
+            <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
@@ -56,7 +56,7 @@
     </div>
     <script lang="javascript">
         function home(){
-            location.href = "index.html";
+            location.href = "index.php";
         }
     </script>
 </body>

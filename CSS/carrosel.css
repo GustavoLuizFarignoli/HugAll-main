@@ -66,6 +66,11 @@ a{
     width: 90%; 
     height: 90%;
     clip-path: inset(20px 20px);
+    cursor: pointer;
+}
+
+.image:hover {
+    cursor: pointer;
 }
 
 .slidestext{

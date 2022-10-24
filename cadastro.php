@@ -12,16 +12,16 @@
     <div id="main">
         <div class="menu">
             <h2 id="Logo"><img id="image" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-            <a href="cadastro.html">Cadastra-se</a>
-            <a href="Index.html">Sobre Nós</a>
-            <a href="Equipe.html">A Equipe</a>
-            <a href="Carrosel.html">ONGs em Destaque</a>
+            <a href="login.php">Logar-se</a>
+            <a href="Index.php">Sobre Nós</a>
+            <a href="Equipe.php">A Equipe</a>
+            <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
         </div>
         <div class="body">
-            <form id="form" action="./cadastro.php" method="POST" onsubmit="return validacao()">
+            <form id="form" action="crud/cadastro_php.php" method="POST" onsubmit="return validacao()">
                 <div class="input">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
@@ -42,18 +42,18 @@
                 <div class="inputradio">
                     <input type="radio" name="usertype" value="1"> Voluntário
                     <input type="radio" name="usertype" value="2"> Doador
-                    <input type="radio" name="usertyper" value="3"> Observador 
+                    <input type="radio" name="usertype" value="3"> Observador 
                 </div>
                 <div class="input">
                     <button type="submit" class="button" id="button-send">Enviar</button>
                 </div>
             </form>
-            <a href="login.html"><label style="cursor: pointer;">já tem um cadastro ? Faça login</label></a>
+            <a href="login.php"><label style="cursor: pointer;">já tem um cadastro ? Faça login</label></a>
         </div>
     </div>
     <script lang="javascript">
         function home(){
-            location.href = "index.html";
+            location.href = "index.php";
         }
 
         function validacao() {

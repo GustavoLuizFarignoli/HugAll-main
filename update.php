@@ -12,34 +12,38 @@
     <div id="main">
         <div class="menu">
             <h2 id="Logo"><img id="image" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-            <a href="cadastro.html">Cadastra-se</a>
-            <a href="Index.html">Sobre Nós</a>
-            <a href="Equipe.html">A Equipe</a>
-            <a href="Carrosel.html">ONGs em Destaque</a>
+            <a href="login.php">Logar-se</a>
+            <a href="Index.php">Sobre Nós</a>
+            <a href="Equipe.php">A Equipe</a>
+            <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
             <a href="#"></a>
         </div>
         <div class="body">
-            <form id="form" action="./cadastro.php" method="POST" onsubmit="return validacao()">
+            <form id="form" action="crud/update_php.php" method="POST" onsubmit="return validacao()" style="height: 25% !important;">
                 <div class="input">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
                 </div>
                 <div class="input">
-                    <label for="">Senha</label>
-                    <input type="text" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
+                    <label for="">Senha Atual</label>
+                    <input type="text" class="box-input" name="atual" id="atual" placeholder="Digite uma senha">     
                 </div>
                 <div class="input">
-                    <button type="submit" class="button" id="button-send">Fazer Login</button>
+                    <label for="">Senha Nova</label>
+                    <input type="text" class="box-input" name="nova" id="nova" placeholder="Digite uma senha">     
+                </div>
+                <div class="input">
+                    <button type="submit" class="button" id="button-send" style="width: 20% !Important;">Alterar Senha</button>
                 </div>
             </form>
-            <a href="cadastro.html"><label style="cursor: pointer;">não tem um cadastro ? Cadastra-se</label></a>
+            <br><a href="login.php"><label style="cursor: pointer;">Fazer Login</label></a>
         </div>
     </div>
     <script lang="javascript">
         function home(){
-            location.href = "index.html";
+            location.href = "index.php";
         }
     </script>
 </body>

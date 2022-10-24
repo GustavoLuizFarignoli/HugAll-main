@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(isset($_SESSION["user"]) && $_SESSION["user"] != 0){
+    //echo "Bem vindo(a) ao Sistema, " . ucfirst($_SESSION["user"][0]);
+  } else {
+    header("Location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +22,10 @@
   <div id="main">
     <div class="menu">
       <h2 id="Logo"><img id="imagelogo" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-      <a href="cadastro.html">Cadastra-se</a>
-      <a href="Index.html">Sobre Nós</a>
-      <a href="Equipe.html">A Equipe</a>
-      <a href="Carrosel.html">ONGs em Destaque</a>
+      <a href="login.php">Logar-se</a>
+      <a href="Index.php">Sobre Nós</a>
+      <a href="Equipe.php">A Equipe</a>
+      <a href="Carrosel.php">ONGs em Destaque</a>
       <a href="#"></a>
       <a href="#"></a>
       <a href="#"></a>
@@ -31,21 +39,21 @@
         </div>
         <div class="carousel-inner" style="height:100% !important;">
           <div class="carousel-item active" style="height:100% !important;">
-            <img src="Imagens/TombaLatas.jpg" class="d-block w-100 image" alt="TombaLatas">
+            <img src="Imagens/TombaLatas.jpg" class="d-block w-100 image" alt="TombaLatas" onclick="tombalatas()">
             <div class="carousel-caption d-none d-md-block slidestext">
               <h5>TombaLatas</h5>
               <p>ONG que cuida de bichinhos que foram abandonados</p>
             </div>
           </div>
           <div class="carousel-item" style="height: 100% !important;">
-            <img src="Imagens/grupo-diginidade.png" class="d-block w-100 image" alt="Grupo Dignidade">
+            <img src="Imagens/grupo-diginidade.png" class="d-block w-100 image" alt="Grupo Dignidade" onclick="dignidade()">
             <div class="carousel-caption d-none d-md-block slidestext">
               <h5>Grupo Dignidade</h5>
               <p>Um grupo que busca dar suporte para a comunidade LGBTQI+</p>
             </div>
           </div>
           <div class="carousel-item" style="height: 100% !important;">
-            <img src="Imagens/Teto.png" class="d-block w-100 image" alt="Teto">
+            <img src="Imagens/Teto.png" class="d-block w-100 image" alt="Teto" onclick="teto()">
             <div class="carousel-caption d-none d-md-block slidestext">
               <h5>Teto</h5>
               <p>Um grupo independente que constrói casas para moradores em local de risco</p>
@@ -65,7 +73,16 @@
   </div>
   <script lang="javascript">
     function home(){
-        location.href = "index.html";
+        location.href = "index.php";
+    }
+    function tombalatas(){
+      location.href = "https://www.instagram.com/tombalatas/";
+    }
+    function dignidade(){
+      location.href = "https://www.grupodignidade.org.br/";
+    }
+    function teto(){
+      location.href = "https://teto.org.br/sobre-a-teto/";
     }
   </script>
 </body>

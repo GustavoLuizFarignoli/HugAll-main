@@ -34,8 +34,8 @@
                     <button type="submit" class="button" id="button-send">Fazer Login</button>
                 </div>
             </form>
-            <br><a href="cadastro.php"><label style="cursor: pointer;">não tem um cadastro ? Cadastra-se</label></a><br>
-            <br><a href="update.php"><label style="cursor: pointer;">alterar senha</label></a>
+            <br><a href="cadastro.php"><label style="cursor: pointer;">Não tem um cadastro ? Cadastra-se</label></a><br>
+            <br><a href="update.php"><label style="cursor: pointer;">Alterar senha</label></a>
         </div>
     </div>
     <script lang="javascript">

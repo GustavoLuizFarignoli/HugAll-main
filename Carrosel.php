@@ -76,13 +76,13 @@
         location.href = "index.php";
     }
     function tombalatas(){
-      location.href = "https://www.instagram.com/tombalatas/";
+      window.open("https://www.instagram.com/tombalatas/", '_blank').focus();
     }
     function dignidade(){
-      location.href = "https://www.grupodignidade.org.br/";
+      window.open("https://www.grupodignidade.org.br/", '_blank').focus();
     }
     function teto(){
-      location.href = "https://teto.org.br/sobre-a-teto/";
+      window.open("https://teto.org.br/sobre-a-teto/", '_blank').focus();
     }
   </script>
 </body>

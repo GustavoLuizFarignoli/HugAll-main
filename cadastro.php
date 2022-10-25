@@ -48,7 +48,7 @@
                     <button type="submit" class="button" id="button-send">Enviar</button>
                 </div>
             </form>
-            <a href="login.php"><label style="cursor: pointer;">já tem um cadastro ? Faça login</label></a>
+            <br><a href="login.php"><label style="cursor: pointer;">Já tem um cadastro ? Faça login</label></a>
         </div>
     </div>
     <script lang="javascript">

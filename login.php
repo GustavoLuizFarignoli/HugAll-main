@@ -22,7 +22,7 @@
         </div>
         <div class="body">
             <form id="form" action="crud/login_php.php" method="POST" onsubmit="return validacao()">
-                <div class="input">
+                <div class="input" style="margin-top: 20px;">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
                 </div>

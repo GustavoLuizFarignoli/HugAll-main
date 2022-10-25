@@ -12,9 +12,10 @@
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;
         echo "Insert Succeed!!!";
-        //header("location: index.php");//
+        header("Location: http://localhost/HugAll-main/login.php");
     }
     else {
-        echo "Insert fail!!!";
+        echo ("alert('Insert fail!!!')");
+        header("Location: http://localhost/HugAll-main/cadastro.php");
     }
 ?>

@@ -22,7 +22,7 @@
         </div>
         <div class="body">
             <form id="form" action="crud/cadastro_php.php" method="POST" onsubmit="return validacao()">
-                <div class="input">
+                <div class="input" style="margin-top: 30px;">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
                 </div>
@@ -38,7 +38,7 @@
                     <label for="">Senha</label>
                     <input type="text" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
                 </div>
-                <label for="" style="color:#231f20; font-weight: bold;">Quero Ser</label>
+                <label for="" style="color:#ffff; font-weight: bold;">Quero Ser</label>
                 <div class="inputradio">
                     <input type="radio" name="usertype" value="1"> Voluntário
                     <input type="radio" name="usertype" value="2"> Doador

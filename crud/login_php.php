@@ -14,13 +14,13 @@
                 session_start();
                 $_SESSION["user"] = 0;
                 echo "Login fail!!!";
-                //header("Location: html/login.html");
+                header("Location: http://localhost/HugAll-main/login.php");
             }
             else{
                 session_start();
                 $_SESSION["user"] = [$cpf,$senha];
                 echo "Login Succeed!!!";
-                //header("Location: index.html");
+                header("Location: http://localhost/HugAll-main/index.php");
             }
         }
     }
@@ -28,6 +28,8 @@
         //session_start();
         //$_SESSION["name"] = 0;
         echo "Login fail!!!";
-        //header("Location: login.html");
+        header("Location: http://localhost/HugAll-main/login.php");
     }
+
+    
 ?>

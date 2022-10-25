@@ -14,12 +14,13 @@
             $cs = strcmp($row['senha'], $atual);
             if ($cc != 0 or $cs != 0){
                 echo "Update fail!!!";
+                header("Location: http://localhost/HugAll-main/login.php");
             }
             else{
                 echo "Update Succeed!!!";
                 $sql2 = "UPDATE usuario SET senha = '$nova' WHERE cpf = '$cpf'";
                 if ($conn->query($sql2) === TRUE) {
-                    //header("location: login.php");
+                    header("Location: http://localhost/HugAll-main/login.php");
                     session_start();
                     $_SESSION["user"] = 0;
                 }
@@ -31,5 +32,6 @@
     }
     else {
         echo "Update fail!!!";
+        header("Location: http://localhost/HugAll-main/login.php");
     }
 ?>

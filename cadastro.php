@@ -57,7 +57,7 @@
         }
 
         function validacao() {
-            let re = "([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})";
+            let re = "([0-9]{2}[\.][0-9]{3}[\.][0-9]{3}[\/]?[0-9]{4}[-][0-9]{2})|([0-9]{3}[\.][0-9]{3}[\.][0-9]{3}[-][0-9]{2})";
             let cpf = document.getElementById('cpf').value;
             let nome = document.getElementById('name').value;
             let senha = document.getElementById('senha').value;

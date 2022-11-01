@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/login.css">
+    <link rel="stylesheet" type="text/css" href="CSS/update.css">
     <link rel="icon" type="image/x-icon" href="Imagens/hugALL-removebg-preview.png">
     <title>Login no HugAll</title>
 </head>
@@ -21,7 +21,7 @@
             <a href="#"></a>
         </div>
         <div class="body">
-            <form id="form" action="crud/update_php.php" method="POST" onsubmit="return validacao()" style="height: 25% !important;">
+            <form id="form" action="crud/update_php.php" method="POST" onsubmit="return validacao()">
                 <div class="input">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">

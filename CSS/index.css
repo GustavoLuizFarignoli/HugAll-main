@@ -44,6 +44,7 @@ a{
 
 .body{
     width: 600px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,18 +63,43 @@ a{
     height: 120px;
 }
 
-.texto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+details {
+    display: block; 
+    width: auto;
+    margin: 10px 0;
+  }
+  
+  details p { 
+    margin: 20px;
+    padding-left: 30px;
+  }
+  
+  summary {
+    display: flex; 
+    background: radial-gradient(circle, rgb(36, 110, 185, 0.7) 0%,   rgba(36,110,185,0.4) 100%);
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    justify-content: flex-start;
     align-items: center;
-}
-
-.topico{
-    font-size: medium;
-    margin: 40px;
-}
-
-p{
-    margin-bottom: 20px;
-}
+  }
+  
+  summary::-webkit-details-marker {
+     display: none;
+  }
+  
+  summary:before {
+     content: "+";
+     font-size: 40px;
+     font-weight: bold;
+     margin: 0 5px;
+     padding: 0;
+     width: 20px;
+     text-align: center;
+  }
+  
+  details[open] summary:before {
+    content: "-";
+  }

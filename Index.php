@@ -18,7 +18,7 @@
             <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
-            <a href="#"></a>
+            <a href="perfil.php">Seu Perfil</a>
         </div>
         <div class="body">
                 <details>
@@ -27,7 +27,7 @@
                     <hr>
                 </details>
                 <details>
-                    <summary><h1>Como Obtemos as informações apresentadas ?</h1></summary>
+                    <summary><h1>Como Obtemos as informações ?</h1></summary>
                     <p>O HugAll possui um base de dados com um resumo das informações que são possiveis de se encontrar sobre cada ONG e com as informações que nossos usuários
                         podem nos dar sobre elas e apresentamos elas de maneira simplificada para aqueles que não conheçem possam saber um pouquinho sobre essas instituições que
                         fazem o bem para tantas pessoas, mas que não possuem os recursos para ajudar todas as aqueles que precisam
@@ -47,6 +47,11 @@
                     <p>O Nosso site possui um área de perfil em que você como usuário pode registrar as ajudas que você prestou a todas as ONGs que descobriu graças ao nosso site,
                         dessa meneira você possui portifolio certificado de tudo que você já fez para ajudar a melhorar a cidade
                     </p>
+                    <hr>
+                </details>
+                <details>
+                    <summary><h1>Como entrar Contato ?</h1></summary>
+                    <p>Entre em contanto com nós atráves de nosso Email: <a href="malito: HugAll@outlook.com">HugAll@outlook.com</a></p>
                     <hr>
                 </details>
                 <img id="image" src="Imagens/hugALL-removebg-preview.png">  

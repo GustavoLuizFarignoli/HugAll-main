@@ -28,14 +28,16 @@
                     <div class="equipe-texto">
                     <h2>Gustavo Luiz Farignoli</h2>
                     <p>Programador Web Front e Back</p>
+                    <a href="https://www.linkedin.com/in/gustavo-luiz-farignoli-164595235/">Me encontre no Linkedin</a>
                     </div>
                 </div>
                 <div class="equipe-membro">
-                <img src="imagens/Breno.jpeg" class="equipe-imagem">
-                <div class="equipe-texto">
-                <h2>Breno Rocha Sedrez</h2>
-                <p>Gerenciador de Banco de Dados</p>
-                </div>
+                    <img src="imagens/Breno.jpeg" class="equipe-imagem">
+                    <div class="equipe-texto">
+                    <h2>Breno Rocha Sedrez</h2>
+                    <p>Gerenciador de Banco de Dados</p>
+                    <a href="https://www.linkedin.com/in/breno-sedrez-944588213/">Me encontre no Linkedin</a>
+                    </div>
                 </div>
             </div>
             <div class="equipe-row">
@@ -44,14 +46,16 @@
                     <div class="equipe-texto">
                     <h2>Gabriel Molec</h2>
                     <p>Gerenciador de Banco de Dados</p>
+                    <a href="https://github.com/Aquahz">Me encontre no Github</a>
                     </div>
                 </div>
-                <div class="equipe-membro">
-                <img src="imagens/Vink.jpeg" class="equipe-imagem">
-                <div class="equipe-texto">
-                <h2>Gabriel Vink</h2>
-                <p>Programador Web</p>
-                </div>
+                    <div class="equipe-membro">
+                    <img src="imagens/Vink.jpeg" class="equipe-imagem">
+                    <div class="equipe-texto">
+                    <h2>Gabriel Vink</h2>
+                    <p>Programador Web</p>
+                    <a href="">Me encontre no Github</a>
+                    </div>
                 </div>
             </div>
         </div>

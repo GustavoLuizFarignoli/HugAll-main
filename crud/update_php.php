@@ -20,9 +20,9 @@
                 echo "Update Succeed!!!";
                 $sql2 = "UPDATE usuario SET senha = '$nova' WHERE cpf = '$cpf'";
                 if ($conn->query($sql2) === TRUE) {
-                    header("Location: http://localhost/HugAll-main/login.php");
                     session_start();
                     $_SESSION["user"] = 0;
+                    header("Location: http://localhost/HugAll-main/login.php");
                 }
                 else {
                     echo "Update fail!!!";

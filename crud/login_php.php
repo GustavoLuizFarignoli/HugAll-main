@@ -18,7 +18,7 @@
             }
             else{
                 session_start();
-                $_SESSION["user"] = [$cpf,$senha];
+                $_SESSION["user"] = [$cpf];
                 echo "Login Succeed!!!";
                 header("Location: http://localhost/HugAll-main/index.php");
             }

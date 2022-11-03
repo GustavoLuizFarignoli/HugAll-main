@@ -19,14 +19,16 @@
 <body>
     <div id="main">
         <div class="menu">
-            <h2 id="Logo"><img id="logoimage" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-            <a href="login.php">Logar-se</a>
-            <a href="Index.php">Sobre Nós</a>
-            <a href="Equipe.php">A Equipe</a>
-            <a href="Carrosel.php">ONGs em Destaque</a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="perfil.php">Seu Perfil</a>
+            <div class="fixed">
+                <h2 id="Logo"><img id="logoimage" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
+                <a href="login.php">Fazer login</a>
+                <a href="Index.php">Sobre Nós</a>
+                <a href="Equipe.php">A Equipe</a>
+                <a href="Carrosel.php">ONGs em Destaque</a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="perfil.php">Seu Perfil</a>
+            </div>
         </div>
         <div class="body">
             <div class="perfil">

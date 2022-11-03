@@ -4,11 +4,12 @@
     box-sizing: border-box;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif !important;
+    scroll-behavior: smooth;
 }
 
 #main{
     width: 100%;
-    height: 143vh;
+    height: 150vh;
     display: flex;
     text-align: center;
     background-image: linear-gradient(to left, rgba(184, 219, 217, 0.7), rgba(184,219,217, 0.4));
@@ -20,7 +21,7 @@ a{
 
 .menu{
     width: 20%;
-    height: 143vh;
+    height: 150vh;
     background-color: rgb(36, 110, 185, 0.6);
 }
 
@@ -72,6 +73,7 @@ details {
   details p { 
     margin: 20px;
     padding-left: 30px;
+    font-size: larger;
   }
   
   summary {

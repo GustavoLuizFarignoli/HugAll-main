@@ -18,7 +18,7 @@
             <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
-            <a href="#"></a>
+            <a href="perfil.php">Seu Perfil</a>
         </div>
         <div class="body">
             <h1>Conheça nossa Equipe</h1>

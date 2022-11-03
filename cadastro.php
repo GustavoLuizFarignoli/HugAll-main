@@ -18,7 +18,7 @@
             <a href="Carrosel.php">ONGs em Destaque</a>
             <a href="#"></a>
             <a href="#"></a>
-            <a href="#"></a>
+            <a href="perfil.php">Seu Perfil</a>
         </div>
         <div class="body">
             <form id="form" action="crud/cadastro_php.php" method="POST" onsubmit="return validacao()">

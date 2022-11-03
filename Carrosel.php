@@ -28,7 +28,7 @@
       <a href="Carrosel.php">ONGs em Destaque</a>
       <a href="#"></a>
       <a href="#"></a>
-      <a href="#"></a>
+      <a href="perfil.php">Seu Perfil</a>
     </div>
     <div class="body">
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="height: 100vh !important; width: 100% !important;">

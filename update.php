@@ -30,11 +30,11 @@
                 </div>
                 <div class="input">
                     <label for="">Senha Atual</label>
-                    <input type="text" class="box-input" name="atual" id="atual" placeholder="Digite uma senha">     
+                    <input type="password" class="box-input" name="atual" id="atual" placeholder="Digite uma senha">     
                 </div>
                 <div class="input">
                     <label for="">Senha Nova</label>
-                    <input type="text" class="box-input" name="nova" id="nova" placeholder="Digite uma senha">     
+                    <input type="password" class="box-input" name="nova" id="nova" placeholder="Digite uma senha">     
                 </div>
                 <div class="input">
                     <button type="submit" class="button" id="button-send" style="width: 20% !Important;">Alterar Senha</button>

@@ -24,7 +24,7 @@
         </div>
         <div class="body">
                 <details>
-                    <summary><h1>Quem Somos Nós?</h1></summary>
+                    <summary><h1>Quem Somos Nós ?</h1></summary>
                     <p>O Hugall é um projeto desenvolvido por um grupo de estudantes da PUCPR e tem como objetivo conectar Voluntários e Doadores com as ONGs de Curitiba</p>
                     <hr>
                 </details>

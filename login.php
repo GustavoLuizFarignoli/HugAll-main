@@ -24,13 +24,13 @@
         </div>
         <div class="body">
             <form id="form" action="crud/login_php.php" method="POST" onsubmit="return validacao()">
-                <div class="input" style="margin-top: 20px;">
+                <div class="input">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
                 </div>
                 <div class="input">
                     <label for="">Senha</label>
-                    <input type="text" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
+                    <input type="password" class="box-input" name="senha" id="senha" placeholder="Digite uma senha">     
                 </div>
                 <div class="input">
                     <button type="submit" class="button" id="button-send">Fazer Login</button>

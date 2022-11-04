@@ -90,6 +90,7 @@ h1{
 
 .perfil{
     margin: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     background-image: radial-gradient(circle, rgb(130, 172, 217,0.75) 0%, rgb(130, 172, 217,1) 100%);
     border: 1px solid #231f20;
@@ -97,7 +98,7 @@ h1{
 
 .name{
     color: #fff;
-    font-size:larger;
+    font-size:large;
 }
 
 .sublinhado{
@@ -108,12 +109,12 @@ h1{
     width: 98% !important;
     margin: 20px;
     color: #fff;
-    font-size:larger;
+    font-size:large;
 }
 
 .about{
     margin: 20px;
-    font-size:larger;
+    font-size:large;
     align-self: center;
     color: #231f20;
     background-color: snow;
@@ -124,7 +125,7 @@ h1{
 .activity{
     background-color: snow;
     color: #231f20;
-    font-size:larger;
+    font-size:large;
     margin: 20px; 
     font-size:large;
     border: #231f20 solid;

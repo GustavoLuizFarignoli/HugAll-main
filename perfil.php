@@ -1,7 +1,36 @@
 <?php
   session_start();
   if(isset($_SESSION["user"]) && $_SESSION["user"] != 0){
-    //echo "Bem vindo(a) ao Sistema, " . ucfirst($_SESSION["user"][0]);
+    
+    include('crud/connection.php');
+
+    $cpf = $_SESSION["user"][0];
+
+    $sql = "SELECT cpf, nome, nascimento, fk_tipo, sobre FROM usuario WHERE cpf = '$cpf'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()){
+            $nome = $row['nome'];
+            $arraydata = explode("-",$row['nascimento']);
+            $data = $arraydata[2] . '/' .$arraydata[1] . '/' .$arraydata[0];
+            $tipo = $row['fk_tipo'];
+            if ($tipo == 1){
+                $tipo = 'Voluntário';
+            } else if ($tipo == 2){
+                $tipo = 'Doador';
+            } else {
+                $tipo = 'Observador';
+            }
+            $sobre = $row['sobre'];
+            if (is_null($sobre) == 1){
+                $sobre = 'Adicione um pouco sobre você aqui';
+            }
+        }
+    }
+    else {
+        header("Location: login.php");
+    }
   } else {
     header("Location: login.php");
   }
@@ -21,7 +50,7 @@
         <div class="menu">
             <div class="fixed">
                 <h2 id="Logo"><img id="logoimage" src="Imagens/hugALL-removebg-preview.png" onclick="home()"></h2>
-                <a href="login.php">Fazer login</a>
+                <a href="login.php">Logar-se</a>
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
@@ -34,30 +63,39 @@
             <div class="perfil">
                 <div class="flex name">
                     <img src="Imagens/user.png" class="image">
-                    <h1 class="sublinhado">Gustavo Luiz Farignoli</h1>
+                    <h1 class="sublinhado"><?php echo $nome;?></h1>
                 </div>
                 <div class="flex information">
                     <div>
                         <h2 class="sublinhado" style="margin-bottom: 5px;">Data de Nascimento</h2>
-                        <h3>24/06/2004</h3>
+                        <h3><?php echo $data;?></h3>
                     </div>
                     <div>
                         <h2 class="sublinhado" style="margin-bottom: 5px;">Tipo de usuário</h2>
-                        <h3>Voluntário</h3>
+                        <h3><?php echo $tipo;?></h3>
                     </div>
                 </div>
                 <div class="about">
                     <h2>Sobre Mim</h2>
                     <hr>
-                    <h3>Não nasci para competir com os outros, mas para superar a mim mesmo. No final do dia, sempre dou risada. E não perco essa minha estranha mania de ter fé na vida!
-                    Eu tentei ser normal, mas não gostei.</h3>
+                    <h3><?php echo $sobre;?></h3>
                 </div>
                 <div class="activity">
                     <h2>Atividades Recentes</h2>
                     <hr>
-                    <h3 style="margin-bottom: 15px;">Doou 1 kg de alimentos para a ONG Tombalatas</h3>
-                    <h3 style="margin-bottom: 15px;">Doou 1000 reais de alimentos para a ONG Teto</h3>
-                    <h3 style="margin-bottom: 15px;">Doou 1000 reais de alimentos para a ONG Grupo Dignidade</h3>
+                    <?php
+                        $sql = "SELECT descricao FROM atividades WHERE fk_cpf = '$cpf'";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()){
+                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . "<br>";
+                            }
+                        }
+                        else {
+                            echo 'nenhuma atividade recente';
+                        }
+                    ?>
                 </div>
             </div>
         </div>

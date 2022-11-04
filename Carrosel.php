@@ -75,16 +75,16 @@
   </div>
   <script lang="javascript">
     function home(){
-        location.href = "index.php";
+      location.href = "index.php";
     }
     function tombalatas(){
-      window.open("https://www.instagram.com/tombalatas/", '_blank').focus();
+      location.href = "perfiltomba.php";
     }
     function dignidade(){
-      window.open("https://www.grupodignidade.org.br/", '_blank').focus();
+      location.href = "perfildignidade.php";
     }
     function teto(){
-      window.open("https://teto.org.br/sobre-a-teto/", '_blank').focus();
+      location.href = "perfilteto.php";
     }
   </script>
 </body>

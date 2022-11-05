@@ -56,7 +56,7 @@
                     <div class="equipe-texto">
                     <h2>Gabriel Vink</h2>
                     <p>Programador Web</p>
-                    <a href="">Me encontre no Github</a>
+                    <a href="https://github.com/GabrielVnk">Me encontre no Github</a>
                     </div>
                 </div>
             </div>

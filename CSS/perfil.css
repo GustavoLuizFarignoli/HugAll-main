@@ -103,6 +103,7 @@ h1{
 
 .sublinhado{
     border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
 }
 
 .information{
@@ -132,4 +133,19 @@ h1{
     border-radius: 8px;
 }
 
+svg{
+    font-size: 30px;
+    fill: #fff;
+}
 
+.bin:hover{
+    fill: red;
+    border-color: 1px #fff;
+    cursor: pointer;
+}
+
+.edit:hover{
+    fill: #588157ff;
+    border-color: 1px #fff;
+    cursor: pointer; 
+}

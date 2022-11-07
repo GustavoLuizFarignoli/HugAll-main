@@ -72,7 +72,7 @@
                                 </svg>
                             </h3>
                             <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="edit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" class="edit" onclick="edit()">
                                     <path d="m33 6.4l-3.7-3.7a1.71 1.71 0 0 0-2.36 0L23.65 6H6a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V11.76l3-3a1.67 1.67 0 0 0 0-2.36ZM18.83 20.13l-4.19.93l1-4.15l9.55-9.57l3.23 3.23ZM29.5 9.43L26.27 6.2l1.85-1.85l3.23 3.23Z" class="clr-i-solid clr-i-solid-path-1"/>
                                 </svg>
                             </h3>
@@ -118,12 +118,17 @@
         function home(){
             location.href = "Index.php";
         }
+
         function deletar(){
             if (confirm("Você tem certeza que deseja apagar sua conta ?")){
                 if(confirm("Essa ação é irreversível, depois de apagar sua conta não será possível recupera-lá, deseja mesmo apagar sua conta ?")){
                     location.href = "crud/delete_php.php";
                 }
             }
+        }
+
+        function edit(){
+            location.href = "editperfil.php";
         }
     </script>
 </body>

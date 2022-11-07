@@ -7,7 +7,7 @@
     $senha = $_POST["senha"];
     $tipo = $_POST["usertype"];
 
-    $sql = "INSERT INTO usuario VALUES('$cpf','$name','$data','$senha','$tipo')";
+    $sql = "INSERT INTO usuario VALUES('$cpf','$name','$data','$senha','$tipo', null , null)";
 
     if ($conn->query($sql) === TRUE) {
         $last_id = $conn->insert_id;

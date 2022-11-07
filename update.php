@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="CSS/update.css">
     <link rel="icon" type="image/x-icon" href="Imagens/hugALL-removebg-preview.png">
-    <title>Login no HugAll</title>
+    <title>Alterar senha no HugAll</title>
 </head>
 <body>
     <div id="main">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="body">
-            <form id="form" action="crud/update_php.php" method="POST" onsubmit="return validacao()">
+            <form id="form" action="crud/update_php.php" method="POST">
                 <div class="input">
                     <label for="">CPF</label>
                     <input type="text" class="box-input" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">

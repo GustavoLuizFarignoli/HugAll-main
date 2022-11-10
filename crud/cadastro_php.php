@@ -10,7 +10,6 @@
     $sql = "INSERT INTO usuario VALUES('$cpf','$name','$data','$senha','$tipo', null , null)";
 
     if ($conn->query($sql) === TRUE) {
-        $last_id = $conn->insert_id;
         echo "Insert Succeed!!!";
         header("Location: http://localhost/HugAll-main/login.php");
     }

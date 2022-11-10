@@ -54,9 +54,12 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
-                <a href="#"></a>
-                <a href="#"></a>
                 <a href="perfil.php">Seu Perfil</a>
+                <?php
+                    if ($tipo != 'Observador'){
+                        echo '<a href="atividades.php">' . 'Cadastrar atividades' . '</a>';
+                    }
+                ?>
             </div>
         </div>
         <div class="body">
@@ -107,7 +110,7 @@
                             }
                         }
                         else {
-                            echo '<h3 style="margin-bottom: 15px;">' . 'nenhuma atividade recente';
+                            echo '<h3 style="margin-bottom: 15px;">' . 'nenhuma atividade recente' . '</h3>';
                         }
                     ?>
                 </div>

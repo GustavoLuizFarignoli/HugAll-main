@@ -17,8 +17,6 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
-                <a href="#"></a>
-                <a href="#"></a>
                 <a href="perfil.php">Seu Perfil</a>
             </div>
         </div>
@@ -97,24 +95,19 @@
             if (aniversario.length != 0) {
                 const ano = aniversario.split("-");
                 if (ano[0] >= 2005){
-                    console.log("tem 18 não irmão 1");
                     return false
                 } else if (ano[0] == 2004){
                     if (ano[1] == mm) {
                         if (ano[2] > dd){
-                            console.log("tem 18 não irmão 2");
                             return false
                         } else {
-                            console.log("tem 18 irmão"); 
                             return true
                         }
                     } else if (ano[1] > mm){
-                        console.log("tem 18 não irmão 3");
                         return false
                     }
                     return true
                 } else {
-                    console.log("tem 18 irmão"); 
                     return true
                 }  
             } else {

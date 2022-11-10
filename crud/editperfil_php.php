@@ -15,46 +15,46 @@
     if(isset($_SESSION["user"]) && $_SESSION["user"] != 0){
         $cpf = $_SESSION["user"][0];
     } else {
-        header("Location: http://localhost/HugAll-main/login.php");;
+        header("Location: http://localhost/HugAll-main/login.php");
     }
 
     if (strlen($nome) != 0){
         $sql = "UPDATE usuario SET nome = '$nome' WHERE cpf = '$cpf'";
         if ($conn->query($sql) === TRUE) {
-            echo "Update Success";
+            header("Location: http://localhost/HugAll-main/perfil.php");
         }
         else {
-            echo "Update fail!!!";
+            header("Location: http://localhost/HugAll-main/login.php");
         }
     } 
 
     if (strlen($data) != 0){
         $sql = "UPDATE usuario SET nascimento = '$data' WHERE cpf = '$cpf'";
         if ($conn->query($sql) === TRUE) {
-            echo "Update Success";
+            header("Location: http://localhost/HugAll-main/perfil.php");
         }
         else {
-            echo "Update fail!!!";
+            header("Location: http://localhost/HugAll-main/login.php");
         }
     } 
 
     if (is_null($tipo) != 0){
         $sql = "UPDATE usuario SET fk_tipo = '$tipo' WHERE cpf = '$cpf'";
         if ($conn->query($sql) === TRUE) {
-            echo "Update Success";
+            header("Location: http://localhost/HugAll-main/perfil.php");
         }
         else {
-            echo "Update fail!!!";
+            header("Location: http://localhost/HugAll-main/login.php");
         }
     }
 
     if (strlen($sobre) != 0){
         $sql = "UPDATE usuario SET sobre = '$sobre' WHERE cpf = '$cpf'";
         if ($conn->query($sql) === TRUE) {
-            echo "Update Success";
+            header("Location: http://localhost/HugAll-main/perfil.php");
         }
         else {
-            echo "Update fail!!!";
+            header("Location: http://localhost/HugAll-main/login.php");
         }
     } 
 

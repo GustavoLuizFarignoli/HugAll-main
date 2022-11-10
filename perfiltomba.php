@@ -17,8 +17,6 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
-                <a href="#"></a>
-                <a href="#"></a>
                 <a href="perfil.php">Seu Perfil</a>
             </div>
         </div>

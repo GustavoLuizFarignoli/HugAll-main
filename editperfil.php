@@ -1,3 +1,26 @@
+<?php
+  session_start();
+  if(isset($_SESSION["user"]) && $_SESSION["user"] != 0){
+    
+    include('crud/connection.php');
+
+    $cpf = $_SESSION["user"][0];
+
+    $sql = "SELECT fk_tipo FROM usuario WHERE cpf = '$cpf'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()){
+            $tipo = $row['fk_tipo'];
+        }
+    }
+    else {
+        header("Location: login.php");
+    }
+  } else {
+    header("Location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,9 +40,12 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
-                <a href="#"></a>
-                <a href="#"></a>
                 <a href="perfil.php">Seu Perfil</a>
+                <?php
+                    if ($tipo != 3){
+                        echo '<a href="atividades.php">' . 'Cadastrar atividades' . '</a>';
+                    }
+                ?>
             </div>
         </div>
         <div class="body">
@@ -55,6 +81,30 @@
             location.href = "index.php";
         }
         function certeza(){
+            var hoje = new Date();
+            var dd = String(hoje.getDate()).padStart(2, '0');
+            var mm = String(hoje.getMonth() + 1).padStart(2, '0');
+            var yyyy = hoje.getFullYear();
+            aniversario = document.getElementById('DataNascimento').value;
+
+            if (aniversario.length != 0) {
+                const ano = aniversario.split("-");
+                if (ano[0] >= 2005){
+                    alert('Essa data de aniversário não é válida')
+                    return false
+                } else if (ano[0] == 2004){
+                    if (ano[1] == mm) {
+                        if (ano[2] > dd){
+                            alert('Essa data de aniversário não é válida')
+                            return false
+                        }
+                    } else if (ano[1] > mm){
+                        alert('Essa data de aniversário não é válida')
+                        return false
+                    }
+                } 
+            }
+
             if (confirm("Você tem certeza que deseja alterar essas confirmações ?")){
                 return true;
             } else {

@@ -7,7 +7,7 @@
     $senha = $_POST["senha"];
     $tipo = $_POST["usertype"];
 
-    $sql = "INSERT INTO usuario VALUES('$cpf','$name','$data','$senha','$tipo', null , null)";
+    $sql = "INSERT INTO usuario VALUES('$cpf','$name','$data','$senha','$tipo', null , 'user.png')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Insert Succeed!!!";

@@ -6,7 +6,7 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT nome, fundacao, causa, contato, sobre FROM ong WHERE id = $id";
+    $sql = "SELECT nome, fundacao, causa, contato, sobre, imagem FROM ong WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -19,6 +19,7 @@
             if (is_null($sobre) == 1){
                 $sobre = 'Sem informações sobre essa ong, nós ajude adicionar, nos contate em HugAll@outlook.com';
             }
+            $imagem = $row['imagem'];
         }
     }
     else {
@@ -53,7 +54,7 @@
         <div class="body">
             <div class="perfil">
                 <div class="flex name">
-                    <img src="Imagens/TombaLatas.jpg" class="image">
+                    <img src=<?php echo "Imagens/ongs/" . $imagem ?> class="image">
                     <h1 class="sublinhado"><?php echo $nome;?></h1>
                 </div>
                 <div class="flex information">
@@ -76,7 +77,7 @@
                     <h3><?php echo $sobre;?></h3>
                 </div>
                 <div class="activity">
-                    <h2>Atividades Recentes</h2>
+                    <h2>Eventos Recentes</h2>
                     <hr>
                     <h3 style="margin-bottom: 15px;">Bazar de Arrecadação na rua Almirante Gonçalves 2428</h3>
                 </div>

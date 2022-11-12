@@ -49,14 +49,16 @@
             </div>
         </div>
         <div class="body">
-            <form id="form" action="crud/editperfil_php.php" method="POST" onsubmit="return certeza()">
+            <form id="form" action="editperfil_php.php" method="POST" onsubmit="return certeza()" enctype="multipart/form-data">
                 <img src="Imagens/user.png" class="image">
+                <label for="">Alterar Foto</label>
+                <input type="file" name="imagem" id="image">
                 <div class="input">
-                    <label for="">Nome</label>
+                    <label for="">Alterar Nome</label>
                     <input type="text" class="box-input" name="name" id="name" placeholder="Digite aqui para alterar seu nome">
                 </div>
                 <div class="input">
-                <label for="">Data de Nascimento</label>
+                <label for="">Alterar Data de Nascimento</label>
                     <input type="date" class="box-input" name="DataNascimento" id="DataNascimento" placeholder="dd/MM/AAAA"> 
                 </div>
                 <div class="input">

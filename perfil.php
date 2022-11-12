@@ -6,7 +6,7 @@
 
     $cpf = $_SESSION["user"][0];
 
-    $sql = "SELECT cpf, nome, nascimento, fk_tipo, sobre FROM usuario WHERE cpf = '$cpf'";
+    $sql = "SELECT cpf, nome, nascimento, fk_tipo, sobre, imagem FROM usuario WHERE cpf = '$cpf'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -15,6 +15,7 @@
             $arraydata = explode("-",$row['nascimento']);
             $data = $arraydata[2] . '/' .$arraydata[1] . '/' .$arraydata[0];
             $tipo = $row['fk_tipo'];
+            $imagem = $row['imagem'];
             if ($tipo == 1){
                 $tipo = 'Voluntário';
             } else if ($tipo == 2){
@@ -65,7 +66,7 @@
         <div class="body">
             <div class="perfil">
                 <div class="flex name">
-                    <img src="Imagens/user.png" class="image">
+                    <img src=<?php echo "Imagens/perfis/" . $imagem ?> class="image">
                     <div style="margin-top: auto; margin-bottom:auto;">
                         <h1 class="sublinhado"><?php echo $nome;?></h1>
                         <div class="flex">

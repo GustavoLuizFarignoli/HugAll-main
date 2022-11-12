@@ -1,3 +1,25 @@
+<?php
+  session_start();
+  if(isset($_SESSION["user"]) && $_SESSION["user"] != 0){
+
+    include('crud/connection.php');
+
+    $cpf = $_SESSION["user"][0];
+
+    $sql = "SELECT fk_tipo FROM usuario WHERE cpf = '$cpf'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()){
+            $tipo = $row['fk_tipo'];
+        }
+    } else {
+        header("Location: login.php");
+    }
+  } else {
+    header("Location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,20 +47,20 @@
             <form id="form" action="crud/atividades_php.php" method="POST" onsubmit="return validacao()">
                 <h2 style="color: #fff;" class="sublinhado">Cadastrando Atividade Recente</h2>
                 <div class="inputradio">
-                    <input type="radio" name="type" value="1" onclick="doacao()"> Doação
-                    <input type="radio" name="type" value="2" onclick="voluntariado()"> Voluntariado
+                    <input type="radio" id="doa" name="type" value="1" onclick="doacao()"> Doação
+                    <input type="radio" id="vol" name="type" value="2" onclick="voluntariado()"> Voluntariado
                 </div>
                 <div id="i1" class="input">
                     <label for="">Quantidade</label>
-                    <input type="text" class="box-input" name="quantidade" id="quantidade" placeholder="Digite a quantidade é a únidade caso tenha ex: 1 kg" disabled>
+                    <input type="text" class="box-input" name="quantidade" id="quantidade" disabled>
                 </div>
                 <div id="i3" class="input">
                     <label for="">Objeto</label>
-                    <input type="text" class="box-input" name="objeto" id="objeto" placeholder="Digite o que você doou" disabled>
+                    <input type="text" class="box-input" name="objeto" id="objeto" disabled>
                 </div>
                 <div id="i4" class="input">
                     <label for="">ONG</label>
-                    <input type="text" class="box-input" name="ong" id="ong" placeholder="Digite para quem você doou" disabled>
+                    <input type="text" class="box-input" name="ong" id="ong" disabled>
                 </div>
                 <div class="input">
                     <button type="submit" class="button" id="button-send">Enviar</button>
@@ -47,18 +69,29 @@
         </div>
     </div>
     <script>
+        var tipo = <?php echo(json_encode($tipo)) ?>
+
         function doacao(){
             document.getElementById('quantidade').disabled = false;
+            document.getElementById('quantidade').placeholder = "Digite a quantidade e a únidade, caso tenha, ex: 1 kg" ;
             document.getElementById('objeto').disabled = false;
-            document.getElementById('ong').disabled = false;
-            // falta alterar os texto para ficar conivente com a operação
+            document.getElementById('objeto').placeholder = "Digite o que você doou"; 
+            document.getElementById('ong').disabled = false; 
+            document.getElementById('ong').placeholder = "Digite para quem você doou";
         }
 
         function voluntariado(){
-            document.getElementById('quantidade').disabled = false;
-            document.getElementById('objeto').disabled = true;
-            document.getElementById('ong').disabled = false;
-            // falta alterar os texto para ficar conivente com a operação
+            if (tipo == 1){
+                document.getElementById('quantidade').disabled = false;
+                document.getElementById('quantidade').placeholder = "Digite a quantidade de tempo pela qual voluntariou ex: 1 semana";
+                document.getElementById('objeto').disabled = true;
+                document.getElementById('ong').disabled = false;
+                document.getElementById('ong').placeholder = "Digite em qual ONG você foi voluntário";
+            } else{
+                alert("Para cadastrar um período como voluntário você precisa se registrar como voluntário")
+                document.getElementById('doa').checked = true;
+                doacao();
+            }
         }
 
         function validacao(){

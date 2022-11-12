@@ -18,11 +18,9 @@
 
             if ($conn->query($sql) === TRUE) {
                 $last_id = $conn->insert_id;
-                //header("Location: http://localhost/HugAll-main/perfil.php");
-                echo "deu bom";
+                header("Location: http://localhost/HugAll-main/perfil.php");
             } else {
-                //header("Location: http://localhost/HugAll-main/atividades.php");
-                echo "deu ruim";
+                header("Location: http://localhost/HugAll-main/atividades.php");
             }
 
         } else if ($tipo == 2) {
@@ -32,11 +30,9 @@
 
             if ($conn->query($sql) === TRUE) {
                 $last_id = $conn->insert_id;
-                //header("Location: http://localhost/HugAll-main/perfil.php");
-                echo "deu bo,";
+                header("Location: http://localhost/HugAll-main/perfil.php");
             } else {
-                //header("Location: http://localhost/HugAll-main/atividades.php");
-                echo "deu ruim";
+                header("Location: http://localhost/HugAll-main/atividades.php");
             }
         }
     } else {

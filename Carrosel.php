@@ -76,13 +76,13 @@
       location.href = "index.php";
     }
     function tombalatas(){
-      location.href = "perfiltomba.php";
+      location.href = "perfilong.php?id=1";
     }
     function dignidade(){
-      location.href = "perfildignidade.php";
+      location.href = "perfilong.php?id=2";
     }
     function teto(){
-      location.href = "perfilteto.php";
+      location.href = "perfilong.php?id=3";
     }
   </script>
 </body>

@@ -106,7 +106,7 @@
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()){
-                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . "<br>";
+                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . "</h3>";
                             }
                         }
                         else {

@@ -12,8 +12,13 @@
         if ($tipo == 1){
             $objeto = $_POST["objeto"];
 
-            $mensagem = "Doou " . $quant . " de " . $objeto . " para a ONG " . $ong;
+            $money = ["reais","real","dólar","dólares","dolar","dolares","euro","euros"];
 
+            if (in_array(strtolower($objeto), $money)){
+                $mensagem = "Doou " . $quant . " " . strtolower($objeto) . " para a ONG " . $ong;
+            } else{
+                $mensagem = "Doou " . $quant . " de " . strtolower($objeto) . " para a ONG " . $ong;
+            }
             $sql = "INSERT INTO atividades (descricao, fk_cpf) VALUES ('$mensagem', '$cpf')";
 
             if ($conn->query($sql) === TRUE) {

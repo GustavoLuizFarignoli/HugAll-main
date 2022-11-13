@@ -55,6 +55,7 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
+                <a href="buscar.php">Buscar ONG</a>
                 <a href="perfil.php">Seu Perfil</a>
                 <?php
                     if ($tipo != 'Observador'){
@@ -102,12 +103,14 @@
                     <h2>Atividades Recentes</h2>
                     <hr>
                     <?php
-                        $sql = "SELECT descricao FROM atividades WHERE fk_cpf = '$cpf'";
+                        $sql = "SELECT id, descricao FROM atividades WHERE fk_cpf = '$cpf'";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()){
-                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . "</h3>";
+                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" class="bin" style="fill:#231f20;" onclick="deletaratividade(' . $row['id']  .')">
+                                <path d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"/>
+                                </svg>' . "</h3>";
                             }
                         }
                         else {
@@ -133,6 +136,12 @@
 
         function edit(){
             location.href = "editperfil.php";
+        }
+
+        function deletaratividade(id){
+            if (confirm("Você tem certeza que deseja apagar essa atividade ?")){
+                location.href = "crud/deletaratividade.php?id=" + id;
+            }
         }
     </script>
 </body>

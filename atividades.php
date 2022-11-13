@@ -39,6 +39,7 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
+                <a href="buscar.php">Buscar ONG</a>
                 <a href="perfil.php">Seu Perfil</a>
                 <a href="atividades.php">Cadastrar atividades</a>
             </div>
@@ -75,7 +76,7 @@
             document.getElementById('quantidade').disabled = false;
             document.getElementById('quantidade').placeholder = "Digite a quantidade e a únidade, caso tenha, ex: 1 kg" ;
             document.getElementById('objeto').disabled = false;
-            document.getElementById('objeto').placeholder = "Digite o que você doou"; 
+            document.getElementById('objeto').placeholder = "Digite o que você doou Ex: Casacos, Alimento ou Reais"; 
             document.getElementById('ong').disabled = false; 
             document.getElementById('ong').placeholder = "Digite para quem você doou";
         }

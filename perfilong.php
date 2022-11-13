@@ -48,6 +48,7 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
+                <a href="buscar.php">Buscar ONG</a>
                 <a href="perfil.php">Seu Perfil</a>
             </div>
         </div>
@@ -79,7 +80,19 @@
                 <div class="activity">
                     <h2>Eventos Recentes</h2>
                     <hr>
-                    <h3 style="margin-bottom: 15px;">Bazar de Arrecadação na rua Almirante Gonçalves 2428</h3>
+                    <?php
+                        $sql = "SELECT descricao FROM eventos WHERE fk_id_ong = $id";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()){
+                                echo '<h3 style="margin-bottom: 15px;">' .  $row['descricao'] . "</h3>";
+                            }
+                        }
+                        else {
+                            echo '<h3 style="margin-bottom: 15px;">' . 'nenhuma atividade recente' . '</h3>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>

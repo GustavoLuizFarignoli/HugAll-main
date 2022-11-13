@@ -40,6 +40,7 @@
                 <a href="Index.php">Sobre Nós</a>
                 <a href="Equipe.php">A Equipe</a>
                 <a href="Carrosel.php">ONGs em Destaque</a>
+                <a href="buscar.php">Buscar ONG</a>
                 <a href="perfil.php">Seu Perfil</a>
                 <?php
                     if ($tipo != 3){

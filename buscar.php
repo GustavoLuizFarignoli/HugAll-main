@@ -34,19 +34,57 @@
                         if(isset($_POST['submit'])){
 
                             $busca = $_POST['busca'];
+                            /*or causa LIKE '%$busca%'*/
 
-                            $sql = "SELECT id, nome, causa FROM ong WHERE nome LIKE '%$busca%' or causa LIKE '%$busca%'";
+                            $sql = "SELECT id, nome, fk_idcausa FROM ong WHERE nome LIKE '%$busca%'";
                             $result = $conn->query($sql);
 
                             if ($result->num_rows > 0) {
                                 $i = 1;
                                 while ($row = $result->fetch_assoc()){
-                                    echo '<h2>' . $i . ": " . '<a href="perfilong.php?id=' . $row['id'] . '">' . $row['nome'] . " - " . $row['causa'] ."</a>" . "</h2>" . "<br>";
-                                    $i = $i + 1;
+
+                                    $idcausa = $row['fk_idcausa'];
+
+                                    $sql2 = "SELECT causa FROM causas WHERE id = $idcausa";
+                                    $result2 = $conn->query($sql2);
+
+                                    if ($result2->num_rows > 0){
+                                        while ($row2 = $result2->fetch_assoc()){
+                                            $causa = $row2['causa'];
+
+                                            echo '<h2>' . $i . ": " . '<a href="perfilong.php?id=' . $row['id'] . '">' . $row['nome'] . " - " . $row2['causa'] ."</a>" . "</h2>" . "<br>";
+                                            $i = $i + 1;
+                                        }
+                                    } else {
+                                        echo "<h2>" . "Sem resultados no banco de dados!!!" . "</h2>"; 
+                                    }   
                                 }
                             }
                             else {
-                                echo "<h2>" . "Sem resultados no banco de dados!!!" . "</h2>";
+                                $sql = "SELECT id, causa FROM causas WHERE causa LIKE '%$busca%'";
+                                $result = $conn->query($sql);
+                                
+                                if ($result->num_rows > 0){
+                                    $i = 1;
+                                    while ($row = $result->fetch_assoc()){
+
+                                        $idcausa = $row['id'];
+
+                                        $sql2 = "SELECT id, nome, fk_idcausa FROM ong WHERE fk_idcausa = $idcausa";
+                                        $result2 = $conn->query($sql2);
+
+                                        if ($result2->num_rows > 0){
+                                            while ($row2 = $result2->fetch_assoc()){
+                                                echo '<h2>' . $i . ": " . '<a href="perfilong.php?id=' . $row2['id'] . '">' . $row2['nome'] . " - " . $row['causa'] ."</a>" . "</h2>" . "<br>";
+                                                $i = $i + 1;
+                                            }
+                                        } else {
+                                            echo "<h2>" . "Sem resultados no banco de dados!!!" . "</h2>"; 
+                                        }   
+                                    }
+                                } else {
+                                    echo "<h2>" . "Sem resultados no banco de dados!!!" . "</h2>";
+                                }
                             }
                         }
                     ?>

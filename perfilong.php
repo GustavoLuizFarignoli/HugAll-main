@@ -6,28 +6,36 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT nome, fundacao, causa, contato, sobre, imagem FROM ong WHERE id = $id";
+    $sql = "SELECT nome, fundacao, fk_idcausa, contato, sobre, imagem FROM ong WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()){
             $nome = $row['nome'];
             $ano = $row['fundacao'];
-            $causa = $row['causa'];
+            $idcausa = $row['fk_idcausa'];
             $contato = $row['contato'];
             $sobre = $row['sobre'];
             if (is_null($sobre) == 1){
                 $sobre = 'Sem informações sobre essa ong, nós ajude adicionar, nos contate em HugAll@outlook.com';
             }
             $imagem = $row['imagem'];
+
+            $sql2 = "SELECT causa FROM causas WHERE id = $idcausa";
+            $result2 = $conn->query($sql2);
+
+            if ($result2->num_rows > 0){
+                while ($row2 = $result2->fetch_assoc()){
+                    $causa = $row2['causa'];
+                }
+            }
         }
-    }
-    else {
+    } else {
         header("Location: index.php");
     }
   } else {
     header("Location: login.php");
-  }
+  } 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

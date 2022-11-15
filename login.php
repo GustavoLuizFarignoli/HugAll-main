@@ -1,3 +1,13 @@
+<?php
+    if(isset($_GET['erro'])){
+        ?>
+        <script>
+            alert("Login Incorreto!")
+        </script>
+        <?php
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -28,7 +28,7 @@
         //session_start();
         //$_SESSION["name"] = 0;
         echo "Login fail!!!";
-        header("Location: http://localhost/HugAll-main/login.php");
+        header("Location: http://localhost/HugAll-main/login.php?erro=1");
     }
 
     

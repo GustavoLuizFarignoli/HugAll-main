@@ -34,7 +34,6 @@
                         if(isset($_POST['submit'])){
 
                             $busca = $_POST['busca'];
-                            /*or causa LIKE '%$busca%'*/
 
                             $sql = "SELECT id, nome, fk_idcausa FROM ong WHERE nome LIKE '%$busca%'";
                             $result = $conn->query($sql);

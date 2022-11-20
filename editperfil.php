@@ -51,7 +51,6 @@
         </div>
         <div class="body">
             <form id="form" action="editperfil_php.php" method="POST" onsubmit="return certeza()" enctype="multipart/form-data">
-                <img src="Imagens/user.png" class="image">
                 <label for="">Alterar Foto</label>
                 <input type="file" name="imagem" id="image">
                 <div class="input">
